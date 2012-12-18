@@ -20,7 +20,10 @@ import org.kohsuke.stapler.DataBoundConstructor;
 public class TimeStampAxisSorter extends MatrixConfigurationSorter{
     public int compare(MatrixConfiguration configuration1, MatrixConfiguration configuration2) {
         Long time = (configuration2.getEstimatedDuration());
-        return time.compareTo(configuration1.getEstimatedDuration());
+        int comparation = time.compareTo(configuration1.getEstimatedDuration());
+        if(comparation!=0)
+            return comparation;
+        return configuration2.getDisplayName().compareTo(configuration1.getDisplayName());
         
     }
 
