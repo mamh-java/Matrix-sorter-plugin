@@ -1,2 +1,6 @@
+.*
+!.gitignore
+
 target
 work
+*.iml
