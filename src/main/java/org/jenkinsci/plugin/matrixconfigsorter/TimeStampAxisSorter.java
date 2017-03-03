@@ -5,7 +5,6 @@
 package org.jenkinsci.plugin.matrixconfigsorter;
 
 import hudson.Extension;
-import hudson.matrix.Axis;
 import hudson.matrix.MatrixConfiguration;
 import hudson.matrix.MatrixConfigurationSorter;
 import hudson.matrix.MatrixConfigurationSorterDescriptor;
@@ -34,17 +33,13 @@ public class TimeStampAxisSorter extends MatrixConfigurationSorter{
 
     @Override
     public void validate(MatrixProject p) throws FormValidation {
-        if(p.getAxes().size()<1){
-            FormValidation.error("Sorting by last axis need at leas one axis");
-        }
     }
 
-    @Extension(ordinal=100) // this is the default
+    @Extension
     public static class DescriptorImpl extends MatrixConfigurationSorterDescriptor {
         @Override
         public String getDisplayName() {
-            return "Estimation duration of build (longest first)";
+            return "Longest builds first";
         }
-
     }
 }

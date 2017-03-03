@@ -26,9 +26,6 @@ public class LastAxisSorter extends MatrixConfigurationSorter{
             List<String> valuesOfLastAxis = lastAxis.getValues();
             compare = compare(valuesOfLastAxis.indexOf(configuration1.getCombination().get(lastAxis.getName())),valuesOfLastAxis.indexOf(configuration2.getCombination().get(lastAxis.getName())));
         }
-        else{
-            
-        }
         if(compare==0){
             compare= configuration1.getDisplayName().compareTo(configuration2.getDisplayName());
         }
@@ -46,18 +43,15 @@ public class LastAxisSorter extends MatrixConfigurationSorter{
     @Override
     public void validate(MatrixProject p) throws FormValidation {
         if(p.getAxes().size()<1){
-            FormValidation.error("Sorting by last axis need at leas one axis");
+            throw FormValidation.error("Sorting by last axis needs at least one axis");
         }
     }
 
-
-    @Extension(ordinal=100) // this is the default
+    @Extension
     public static class DescriptorImpl extends MatrixConfigurationSorterDescriptor {
         @Override
         public String getDisplayName() {
             return "Last axis order";
         }
-
     }
-
 }
