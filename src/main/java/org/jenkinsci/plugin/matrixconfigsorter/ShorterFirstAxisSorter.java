@@ -18,12 +18,10 @@ import org.kohsuke.stapler.DataBoundConstructor;
  */
 public class ShorterFirstAxisSorter extends MatrixConfigurationSorter{   
     public int compare(MatrixConfiguration configuration1, MatrixConfiguration configuration2) {
-        Long time = (configuration1.getEstimatedDuration());
-        int comparision = time.compareTo(configuration2.getEstimatedDuration());
+        int comparision = Long.compare(configuration1.getEstimatedDuration(), configuration2.getEstimatedDuration());
         if(comparision!=0)
             return comparision;
         return configuration1.getDisplayName().compareTo(configuration2.getDisplayName());
-        
     }
 
     @DataBoundConstructor
