@@ -14,6 +14,7 @@
 
   <properties>
     <jenkins.version>1.580</jenkins.version>
+    <findbugs.failOnError>false</findbugs.failOnError>
   </properties>
 
   <dependencies>
@@ -23,7 +24,7 @@
       <version>1.0</version>
     </dependency>
   </dependencies>
-  
+
   <developers>
     <developer>
       <id>lvotypko</id>
@@ -44,7 +45,7 @@
       <url>http://repo.jenkins-ci.org/public/</url>
     </pluginRepository>
   </pluginRepositories>
-  
+
   <scm>
     <connection>scm:git:ssh://github.com/jenkinsci/Matrix-sorter-plugin.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/jenkinsci/Matrix-sorter-plugin.git</developerConnection>
