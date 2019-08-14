@@ -25,13 +25,7 @@
     </dependency>
   </dependencies>
 
-  <developers>
-    <developer>
-      <id>lvotypko</id>
-      <name>Lucie Votypkova</name>
-      <email>lvotypko@redhat.com</email>
-    </developer>
-  </developers>
+  <developers/>
 
   <repositories>
     <repository>
