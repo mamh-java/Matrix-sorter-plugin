@@ -3,7 +3,8 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>2.19</version>
+    <version>3.5</version>
+    <relativePath />
   </parent>
 
   <artifactId>Matrix-sorter-plugin</artifactId>
@@ -13,7 +14,9 @@
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Matrix+configuration+sorter+plugin</url>
 
   <properties>
-    <jenkins.version>1.580</jenkins.version>
+    <jenkins.version>2.222.3</jenkins.version>
+    <java.level>8</java.level>
+    <slf4jVersion>1.7.26</slf4jVersion>
     <findbugs.failOnError>false</findbugs.failOnError>
   </properties>
 
@@ -21,11 +24,17 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>matrix-project</artifactId>
-      <version>1.0</version>
+      <version>1.4</version>
     </dependency>
   </dependencies>
-
   <developers/>
+
+  <scm>
+    <connection>scm:git:ssh://github.com/jenkinsci/Matrix-sorter-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/Matrix-sorter-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/Matrix-sorter-plugin</url>
+    <tag>Matrix-sorter-plugin-1.2</tag>
+  </scm>
 
   <repositories>
     <repository>
@@ -40,10 +49,4 @@
     </pluginRepository>
   </pluginRepositories>
 
-  <scm>
-    <connection>scm:git:ssh://github.com/jenkinsci/Matrix-sorter-plugin.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/Matrix-sorter-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/Matrix-sorter-plugin</url>
-    <tag>Matrix-sorter-plugin-1.2</tag>
-  </scm>
 </project>
